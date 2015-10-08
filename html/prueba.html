@@ -17,6 +17,9 @@
 			<option value="3">3</option>
 		</select>
 		<button id="abreVentana" onclick="abrePopup();">Abre popup</button>
+		<button id="decirHola">Objeto dice hola</button>
+		<button id="funcionAnonima">funcionAnonima</button>
+		<button id="timeOut">timeOut</button>
 
 		<script type="text/javascript" src="../js/archivojs.js"></script>
 		<script type="text/javascript">
@@ -30,16 +33,14 @@
 
 			var boolean1 = true;
 			var boolean2 = false;
-			var boolean3 = false;
-			asfdalshflkwsa
 
-			console.log("El tipo de numero1 es: ", typeof(numero1));
-			console.log("El tipo de numero2 es: ", typeof(numero2));
-			console.log("El tipo de numero3 es: ", typeof(numero3));
-			console.log("El tipo de cadena1 es: ", typeof(cadena1));
-			console.log("El tipo de cadena2 es: ", typeof(cadena2));
-			console.log("El tipo de boolean1 es: ", typeof(boolean1));
-			console.log("El tipo de boolean2 es: ", typeof(boolean2));
+			// console.log("El tipo de numero1 es: ", typeof(numero1));
+			// console.log("El tipo de numero2 es: ", typeof(numero2));
+			// console.log("El tipo de numero3 es: ", typeof(numero3));
+			// console.log("El tipo de cadena1 es: ", typeof(cadena1));
+			// console.log("El tipo de cadena2 es: ", typeof(cadena2));
+			// console.log("El tipo de boolean1 es: ", typeof(boolean1));
+			// console.log("El tipo de boolean2 es: ", typeof(boolean2));
 
 			var obj = {
 				nombre: "JL",
@@ -48,6 +49,9 @@
 					alert("Hola!");
 				}
 			}
+
+			var objHola = document.getElementById("decirHola");
+			objHola.onclick = obj.saludar;
 
 			var arr = [1, 2, 3, 4, 5];
 

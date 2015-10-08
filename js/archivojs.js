@@ -6,5 +6,36 @@ seleccion.onchange = function (){
 };
 
 function abrePopup() {
-	window.open("http://www.google.es", "Google", "width=800, height=600");
+	open("http://www.google.es", "Google", "width=800, height=600");
 }
+
+var funcionAnonima = function() {
+	alert("Funcion anonima");
+}
+
+function fLlama (param) {
+	param();
+	//return function() {
+	//	alert("Hey!");
+	//}
+}
+
+// fLlama(funcionAnonima);
+
+document.getElementById("funcionAnonima").onclick = funcionAnonima;
+
+//document.getElementById("timeOut").onclick = function () {
+//	setTimeout(function() {
+//		alert("Timeout!");
+//	}, 3000);
+//};
+
+var temporizador = function() {
+	alert("Timeout!");
+};
+
+var clickBoton = function() {
+	setTimeout(temporizador, 3000)
+};
+
+document.getElementById("timeOut").onclick = clickBoton;
