@@ -1,0 +1,67 @@
+ <!DOCTYPE html>
+ <html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Un Titulo para el Browser de turno </title>
+		<script type="text/javascript">
+			// alert("Hola");
+		</script>
+	</head>
+
+	<body>
+		<H1>Otro t&iacute;tulo, esta vez m&aacute;s largo. </H1>
+		<button id="quien" onclick="alert(navigator.userAgent);">Quien soy</button>
+		<select id="sel">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+		</select>
+		<button id="abreVentana" onclick="abrePopup();">Abre popup</button>
+
+		<script type="text/javascript" src="../js/archivojs.js"></script>
+		<script type="text/javascript">
+			var numero1 = 23;
+			var numero2 = 6.9;
+			var numero3 = 0;
+			// var numero3 = !numero3;
+
+			var cadena1 = 'Cadena';
+			var cadena2 = "90";
+
+			var boolean1 = true;
+			var boolean2 = false;
+			var boolean3 = false;
+			asfdalshflkwsa
+
+			console.log("El tipo de numero1 es: ", typeof(numero1));
+			console.log("El tipo de numero2 es: ", typeof(numero2));
+			console.log("El tipo de numero3 es: ", typeof(numero3));
+			console.log("El tipo de cadena1 es: ", typeof(cadena1));
+			console.log("El tipo de cadena2 es: ", typeof(cadena2));
+			console.log("El tipo de boolean1 es: ", typeof(boolean1));
+			console.log("El tipo de boolean2 es: ", typeof(boolean2));
+
+			var obj = {
+				nombre: "JL",
+				edad: 40,
+				saludar: function() {
+					alert("Hola!");
+				}
+			}
+
+			var arr = [1, 2, 3, 4, 5];
+
+			console.log("El tipo de obj es: ", typeof(obj));
+			console.log("El tipo de arr es: ", typeof(arr));
+
+			var y = (boolean2 == numero3) ? "Si" : "No";
+			console.log("Valor y: ", y);
+
+			var obj1 = {};
+			// obj1.a = 132;
+			var x = obj1.a || 34;
+			console.log("Valor x: ", x);
+
+		</script>
+	</body>
+</html>
