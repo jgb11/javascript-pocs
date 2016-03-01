@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="../css/sweetalert.css">
+  <script src="../js/sweetalert-dev.js"></script>
+  <script src="../js/jquery-2.1.4.js"></script>
+</head>
+
+<body>
+  <button id="msg">Simple message</button>
+  <button id="msgError">Error message</button>
+  <button id="msgSuccess">Success message</button>
+  <script>
+  $(document).ready(function() {
+    $("#msg").click(function(){
+    	swal("Here's a message!");
+    });
+    $("#msgError").click(function(){
+    	swal("Oops...", "Something went wrong!", "error");
+    });
+    $("#msgSuccess").click(function(){
+    	swal("Good job!", "You clicked the button!", "success");
+    });
+  });
+  </script>
+</body>
+
+</html>

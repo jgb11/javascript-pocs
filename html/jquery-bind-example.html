@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>jQuery bind example</title>
+  <script src="../js/jquery-2.1.4.js"></script>
+</head>
+
+<body>
+  <!-- Example1 -->
+  Last Name :
+  <input type="text" id="lastName" />
+  <!-- Example2 -->
+  <br/>
+  <a href="http://www.webcodegeeks.com/" class="link" id="link1">Link1</a>
+  <br/>
+  <a href="http://www.webcodegeeks.com/" class="link" id="link2">Link2</a>
+  <!-- Example3 -->
+  <div id="container" style="width:100px;height:100px;background-color:#f00"></div>
+  <script type="text/javascript">
+  //Example1
+  $("#lastName").bind("change", function() {
+    var value = $(this).val().toUpperCase();
+    $(this).val(value);
+  });
+
+  //Example2
+  $("#link2").bind("click", false);
+
+  //Example3
+  $("#container").bind({
+    mouseenter: function() {
+      $(this).css("background-color", "#0f0");
+    },
+    mouseleave: function() {
+      $(this).css("background-color", "#f00");
+    }
+  });
+  </script>
+</body>
+
+</html>
