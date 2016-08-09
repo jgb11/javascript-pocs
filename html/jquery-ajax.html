@@ -3,26 +3,36 @@
 <head>
     <meta charset="utf-8">
 	<title>jQuery AJAX Example</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 </head>
 <body>
-<style>
-    html {
-        margin: 10em 0em 0em 10em;
-    }
-</style>
+
+<div id="header"></div>
 
 <!-- HTML SECTION  -->
-<div class="wrapper">
+<div class="wrapper container">
     <button>Click Me</button>   <!-- content will be shown on this button click -->
     <div class="content"></div> <!-- content will be shown in this div -->
 </div>
+
+<div id="footer"></div>
 
 <!-- JAVASCRIPT SECTION  -->
 <script src="../js/jquery-1.11.3.min.js"></script>
 
 <script>
     $('button').on('click', function(){    /*listening for button click event*/
-        $.ajax('document.html', {          /*specify the destination file*/
+        $.ajax('/html/resources/document.html', {          /*specify the destination file*/
             success: function(response){    /*if ajax reaches the document successfully..*/
                 $('.content').html(response);
                 /*$('.content').html($(response).find('img, h2').fadeIn());*/
@@ -32,7 +42,11 @@
     });
 </script>
 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
 </body>
 </html>
-
-
